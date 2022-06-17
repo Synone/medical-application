@@ -1,0 +1,15 @@
+<div class="fa-doctor">
+  <!-- Header -->
+  <div class="fa-doctor__header">
+    <div class="fa-doctor__header-title">
+      Doctors
+    </div>
+    <div class="fa-doctor__header-add">
+      <button (click)="addDoctor()" class="fa-addBtn" pButton type="button">+ Add Doctor</button>
+    </div>
+  </div>
+
+  <!-- Body -->
+
+  <app-doctor-list [DoctorList]="doctorList"></app-doctor-list>
+</div>

@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "name": "Sony",
+      "department": "CBSN, M.D of Medicine",
+      "title": "Cardiologist",
+      "phone": "(+84) 902624475",
+      "email": "synodoc0330@hcm.com",
+      "image": "",
+      "isActive": true
+    },
+    {
+      "name": "Strange",
+      "department": "CBSN, M.D of Surgery",
+      "title": "Neurologist",
+      "phone": "(+84) 302898311",
+      "email": "strangemagic@nyc.com",
+      "image": "",
+      "isActive": false
+    },
+    {
+      "name": "Theo",
+      "department": "CBSN, M.D of Surgery",
+      "title": "Neurologist",
+      "phone": "(+84) 302898311",
+      "email": "strangemagic@nyc.com",
+      "image": "",
+      "isActive": true
+    },
+    {
+      "name": "Wong",
+      "department": "CBSN, M.D of Surgery",
+      "title": "Neurologist",
+      "phone": "(+84) 302898311",
+      "email": "strangemagic@nyc.com",
+      "image": "",
+      "isActive": false
+    },
+    {
+      "name": "Steve",
+      "department": "CBSN, M.D of Surgery",
+      "title": "Neurologist",
+      "phone": "(+84) 302898311",
+      "email": "strangemagic@nyc.com",
+      "image": "",
+      "isActive": true
+    },
+    {
+      "name": "Evan",
+      "department": "CBSN, M.D of Surgery",
+      "title": "Neurologist",
+      "phone": "(+84) 302898311",
+      "email": "strangemagic@nyc.com",
+      "image": "",
+      "isActive": false
+    }
+  ]
+}

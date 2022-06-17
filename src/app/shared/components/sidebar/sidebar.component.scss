@@ -1,0 +1,123 @@
+@import "../../styles/variable";
+
+.fa-sidebar-area{
+    background-color: $darkblue;
+    height: 100%;
+    &__logo{
+        display: flex;
+        align-items: center;
+        height: 90px;
+        // margin-left: 30px;
+    }
+    &__svg{
+        margin-left: 40px;
+        margin-right: 10px;
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-family: 'Inter', sans-serif;
+        color: $text-color;
+    }
+    &__point{
+        font-size: 2rem;
+        color: $pink;
+    }
+}
+.is-active{
+    background-color: $violet;
+
+    .fa-svg-icon{
+        path{
+            fill: white;
+        }
+    }
+    .fa-sidebar-options__text{
+        color: $white;
+    }
+}
+.fa-sidebar-options{
+    &__ul{
+        padding-left: 1rem;
+    }
+    li{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 4px 10px;
+        border-radius: 8px;
+        border-color: $border-blue;
+        margin-right: 8px;
+      
+        color: $darkGray;
+        font-family: 'Inter',sans-serif;
+        font-size: .9rem;
+        font-weight: 500;
+        justify-content: flex-start;
+        &:first-child{
+            margin-top: 10px;
+        }
+        &:hover{
+            background-color: $violet;
+            cursor: pointer;
+            color: $white;
+            .fa-svg-icon{
+                path{
+                    fill: white
+                };
+                // filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+                // filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
+            }
+        }
+       
+    }
+    &__text-container{
+        padding-left: 14px;
+
+    }
+    &__icons-container{
+        padding: 3px;
+  
+    }
+}
+
+.fa-sidebar-register{
+    display: flex;
+    align-items: center;
+    background-color: $darkestBlue;
+    // justify-content: center;
+    margin-left: 10%;
+    margin-top: 30%;
+    width: 80%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    &__icon{
+        margin-bottom: 4px;
+        margin-right: 10px;
+    }
+    &__text{
+        color: $text-color;
+        font-family: "Inter",sans-serif;
+        font-size: .8rem;
+        font-weight: 500;
+
+    }
+}
+
+.fa-footer{
+    margin-top: 20%;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    &__setting{
+        margin-top: 60px;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        color: $darkGray;
+        font-family: 'Inter',sans-serif;
+        font-weight: 300;
+        font-size: .9rem;
+        &-icon{
+            padding-right: 10px;
+        }
+    }
+}

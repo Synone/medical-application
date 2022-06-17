@@ -1,0 +1,49 @@
+@import "../../../app/shared/styles/variable";
+
+.fa-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  h1 {
+    font-family: "Inter", sans-serif;
+    color: $text-color;
+    font-size: 1.8rem;
+  }
+  &__form {
+    padding: 30px 60px;
+    width: 480px;
+    border-radius: 3px;
+    background-color: $darkblue;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    .p-inputgroup {
+      input {
+        width: 100%;
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
+    p-button {
+      .p-button {
+        background-color: $lightViolet;
+        border: $violet;
+        padding: 0.5rem 1rem;
+        &:hover {
+          background: $violet;
+        }
+      }
+    }
+  }
+}
+.isInvalid {
+  color: #ff447c;
+
+  font-size: 0.8rem;
+  font-style: italic;
+}

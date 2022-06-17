@@ -1,0 +1,69 @@
+@import "../../../shared/styles/_variable.scss";
+
+.row {
+  .user-phone-number {
+    background-color: #293a58;
+    border-color: #7988a3;
+    color: #9aa0a8;
+    width: 400px;
+  }
+  .fa-input-wrapper {
+    margin-bottom: 20px;
+    &:first-child {
+      margin-top: 60px;
+    }
+  }
+  .p-input-icon-left {
+    input {
+      outline: none;
+      padding: 10px;
+      padding-left: 35px;
+      border: 1px solid #7988a3;
+      background-color: #293a58;
+      border-radius: 5px;
+      color: #9aa0a8;
+      min-width: 400px;
+      // color-scheme: white;
+    }
+    select {
+      padding: 10px;
+      min-height: 46px;
+      margin: 0 !important;
+    }
+    i {
+      color: $white;
+    }
+  }
+
+  .form-select {
+    background-color: #293a58;
+    border-color: #7988a3;
+    color: #9aa0a8;
+    width: 400px;
+  }
+
+  .image {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    width: 220px;
+    .fa-btn-update {
+      border: 1px solid #293a58;
+      padding: 5px 13px;
+      border-radius: 5px;
+      margin-top: 5px;
+      outline: none;
+      color: $white;
+      background-color: #293a58;
+      transition: all 0.5s;
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+  .isInvalid {
+    color: #ff447c;
+
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+}

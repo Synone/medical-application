@@ -1,0 +1,31 @@
+<div class="fa-appointment-container">
+  <!-- Header of the appointment -->
+  <div class="fa-appointment-header">
+    <!-- Lefthand div -->
+    <div class="fa-appoinment-header__left">
+      <h3 class="fa-appointment-header__title">Upcoming Appointments</h3>
+    </div>
+
+    <!-- Right-hand div -->
+    <div class="fa-appointment-header__right">
+      <div class="fa-appointment-header__status">
+  
+        <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" placeholder="All status" optionLabel="name"
+	[showClear]="true"></p-dropdown>
+      </div>
+      <div class="fa-appointment-header__cabinet">
+
+        <p-dropdown [options]="cities" [(ngModel)]="selectedCity1" placeholder="All cabinet" optionLabel="name"
+	[showClear]="true"></p-dropdown>
+      </div>
+      <div class="fa-appointment-header__new">
+        <button (click)="newAppoint()" class="fa-newBtn" pButton type="button">New Appointment</button>
+      </div>
+    </div>
+  </div>
+  <!-- End of header -->
+  
+  <div>
+    <app-list-appointment ></app-list-appointment>
+  </div>
+</div>

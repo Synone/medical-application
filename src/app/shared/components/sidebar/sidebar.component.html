@@ -1,0 +1,52 @@
+<div class="fa-sidebar-area">
+  <div class="fa-sidebar-area__logo">
+    <div class="fa-sidebar-area__svg">
+      <svg-icon class="fa-svg-icon" src="../../../../assets/icons/svg/metrixlogo.svg"></svg-icon>
+    </div>
+    <div>
+      <span class="fa-sidebar-area__text">Medix</span>
+      <span class="fa-sidebar-area__point">.</span>
+    </div>
+  </div>
+  <!-- list option -->
+  <div class="fa-sidebar-options">
+    <ul class="fa-sidebar-options__ul">
+      <li *ngFor="let item of menu" [routerLink]="'/'+[item.option]" [routerLinkActive]="['is-active']">
+        <div class="fa-sidebar-options__icons-container">
+          <svg-icon class="fa-svg-icon" src="../../../../assets/icons/svg/{{item.option}}.svg"></svg-icon>
+        </div>
+        <div class="fa-sidebar-options__text-container">
+          <span class="fa-sidebar-options__text">{{item.option | titlecase}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- end of list option -->
+
+  <!-- register patient -->
+  <div class="fa-sidebar-register">
+    <div class="fa-sidebar-register__icon">
+      <svg-icon class="fa-svg-icon" src="../../../../assets/icons/svg/plusicon.svg"></svg-icon>
+    </div>
+    <div class="fa-sidebar-register__text">Register Patients</div>
+  </div>
+
+  <!-- footer sidebar -->
+  <div class="fa-footer">
+    <div class="fa-footer__img">
+      <svg-icon class="fa-svg-icon" src="../../../../assets/icons/svg/footer.svg"></svg-icon>
+
+    </div>
+
+    <div class="fa-footer__setting">
+      <div class="fa-footer__setting-icon">
+        <svg-icon class="fa-svg-icon" src="../../../../assets/icons/svg/setting.svg"></svg-icon>
+
+      </div>
+      <div class="fa-footer__setting-text">
+        Settings
+      </div>
+    </div>
+
+  </div>
+</div>

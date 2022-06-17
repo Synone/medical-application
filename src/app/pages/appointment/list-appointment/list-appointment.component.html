@@ -1,0 +1,62 @@
+<div class="fa-list-patients">
+  <p-table [value]="listItems" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+      <tr class="fa-head-table">
+        <th>Patient</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Gender</th>
+        <th>Phone Number</th>
+        <th>Action</th>
+        <th>Apponintment</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-listItem>
+      <tr class="fa-body-table">
+        <td>
+          <div class="fa-list-patients__items">
+            <div class="fa-list-patients__avatar">
+              <img src="../../../../assets/icons/avatar.svg" alt="" />
+            </div>
+            <p>{{ listItem?.patientName }}</p>
+         
+          </div>
+        </td>
+        <td>
+          <div class="fa-list-patients__items">
+            <p class="test">
+              {{ listItem?.appointmentDate }}
+            </p>
+          </div>
+        </td>
+        <td>{{ listItem?.appointmentTime }}</td>
+        <td>{{ listItem?.gender }}</td>
+        <td>{{ listItem?.patientPhone }}</td>
+        <td>
+          <div class="fa-list-patients__icons-container">
+            <div class="fa-list-patients__action-icon">
+              <img src="../../../../assets/icons/edit.svg" alt="" />
+            </div>
+            <div class="fa-list-patients__action-icon">
+              <img src="../../../../assets/icons/account.svg" alt="" />
+            </div>
+            <div class="fa-list-patients__action-icon">
+              <img src="../../../../assets/icons/bin.svg" alt="" />
+            </div>
+          </div>
+        </td>
+        <td>
+          <div *ngIf="listItem?.active; else cancel" class="fa-list-patients__appointment">
+            Start Appointment
+          </div>
+          <ng-template #cancel>
+            <div class="fa-list-patients__canceled">
+              Canceled
+            </div>
+          </ng-template>
+
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

@@ -1,0 +1,100 @@
+<form [formGroup]="userForm">
+  <div class="row">
+    <div class="col-md-4 d-flex flex-column align-center align-items-center">
+      <div class="image">
+        <img src="https://image.shutterstock.com/image-vector/people-icon-person-user-vector-260nw-1396650341.jpg"
+          alt="..." class="img-thumbnail" />
+      </div>
+      <div class="fa-new__upload">
+        <p-fileUpload chooseLabel="Upload" mode="basic" name="avatar[]" accept="image/*" [maxFileSize]="1000000"
+          (onUpload)="onBasicUpload($event)"></p-fileUpload>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="field col-12 md:col-4 fa-input-wrapper">
+        <div class="p-input-icon-left">
+          <i class="pi pi-user"></i>
+          <input type="text" class="p-inputtext-sm" pInputText placeholder="Enter your full name..."
+            [formControlName]="fieldKeyNames.patientName" />
+        </div>
+        <div *ngIf="isValidControl(fieldKeyNames.patientName)" class="isInvalid">
+          <div *ngFor="let msg of getErrorMessage(fieldKeyNames.patientName)">
+            !
+            {{msg}}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="field col-12 md:col-4 fa-input-wrapper">
+        <div class="user-phone-number p-input-icon-left">
+          <i class="pi pi-phone"></i>
+          <input type="text" class="p-inputtext-sm" pInputText placeholder="Enter your phone number..."
+            [formControlName]="fieldKeyNames.patientPhone" />
+        </div>
+        <div *ngIf="isValidControl(fieldKeyNames.patientPhone)" class="isInvalid">
+
+          <div *ngFor="let msg of getErrorMessage(fieldKeyNames.patientPhone)">
+            !
+            {{msg}}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="field col-12 md:col-4 fa-input-wrapper">
+        <div class="p-input-icon-left">
+          <select [formControlName]="fieldKeyNames.gender"
+            class="fa-newform form-select form-select-sm mb-2 fa-custom-select">
+            <!-- <option selected>Gender</option> -->
+            <option disabled selected value="">{{fieldKeyNames.gender | titlecase}}</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div *ngIf="isValidControl(fieldKeyNames.gender)" class="isInvalid">
+
+          <div *ngFor="let msg of getErrorMessage(fieldKeyNames.gender)">
+            !
+            {{msg}}
+          </div>
+        </div>
+      </div>
+
+      <div class="field col-12 md:col-4 fa-input-wrapper">
+        <div class="p-input-icon-left">
+          <i class="pi pi-clock"></i>
+          <input type="time" class="p-inputtext-sm" pInputText [formControlName]="fieldKeyNames.appointmentTime" />
+        </div>
+
+      </div>
+
+      <div class="field col-12 md:col-4 fa-input-wrapper">
+        <div class="p-input-icon-left">
+          <i class="pi pi-calendar"></i>
+          <input type="date" class="p-inputtext-sm" pInputText [formControlName]="fieldKeyNames.appointmentDate" />
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 25px">
+    <div class="col-lg-7">
+      <div class="d-flex flex-row-reverse">
+        <div class="p-2 fa-appointment-header__new">
+          <button class="p-button-outlined" pButton type="button">
+            Reset
+          </button>
+        </div>
+        <div class="p-2 fa-appointment-header__new">
+          <button class="p-button-outlined" pButton type="button" (click)="onSubmitFormGroup()">
+            Create appointment
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

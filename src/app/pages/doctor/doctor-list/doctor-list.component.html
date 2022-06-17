@@ -1,0 +1,84 @@
+<div class="row no-mrRL gy-5 fa-doctor__body">
+  <!-- <div class="col-md-3  no-mrRL">
+    <p-card styleClass="fa-doctor__body-card">
+      <ng-template pTemplate="header">
+        <div class="fa-doctor__body-header">
+          <div class="fa-doctor__body-avatar">
+            <div class="fa-doctor__body-avatar-wrapper">
+              <img class="fa-doctor__body-avatar-img" src="../../../assets/images/sample.jpg" alt="Doctor Strange">
+              <div class="fa-doctor__body-avatar-status">
+                <div [class.fa-doctor__body-avatar-isActive]='isActive' class="fa-doctor__body-avatar-inactive">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fa-doctor__body-options-wrapper">
+            <div (click)="menu.toggle($event)" class="fa-doctor__body-options-icon">
+              <svg-icon class="fa-svg-icon" src="../../../assets/icons/threedots.svg"></svg-icon>
+            </div>
+            <p-menu #menu [popup]="true" [model]="items"></p-menu>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template pTemplate='content'>
+        <div class="fa-doctor__body-info">
+          <h3>Dr. Sony Nguyen</h3>
+          <p class="fa-doctor__body-info__division">
+            MBBS, M.D of Medicine
+          </p>
+          <p class="fa-doctor__body-info__specialize">Cardiologist</p>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <div class="fa-doctor__body-contact">
+          <p>Phone: +(123) 1800-567</p>
+          <p>Email: syno3311@gmail.com</p>
+        </div>
+      </ng-template>
+    </p-card>
+  </div> -->
+
+  <div *ngFor="let doctor of DoctorList" class="col-md-3  no-mrRL">
+    <p-card styleClass="fa-doctor__body-card">
+      <ng-template pTemplate="header">
+        <div class="fa-doctor__body-header">
+          <div class="fa-doctor__body-avatar">
+            <div class="fa-doctor__body-avatar-wrapper">
+              <img class="fa-doctor__body-avatar-img"
+                src="https://png.pngtree.com/png-vector/20190703/ourlarge/pngtree-doctor-avatar-free-vector-png-image_1535582.jpg"
+                alt="Doctor Strange">
+              <div class="fa-doctor__body-avatar-status">
+                <div [class.fa-doctor__body-avatar-isActive]='doctor.isActive' class="fa-doctor__body-avatar-inactive">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fa-doctor__body-options-wrapper">
+            <div (click)="menu.toggle($event)" class="fa-doctor__body-options-icon">
+              <svg-icon class="fa-svg-icon" src="../../../assets/icons/threedots.svg"></svg-icon>
+            </div>
+            <p-menu #menu [popup]="true" [model]="items"></p-menu>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template pTemplate='content'>
+        <div class="fa-doctor__body-info">
+          <h3>Dr. {{doctor.name}}</h3>
+          <p class="fa-doctor__body-info__division">
+            {{doctor.department}}
+          </p>
+          <p class="fa-doctor__body-info__specialize">{{doctor.title}}</p>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <div class="fa-doctor__body-contact">
+          <p>Phone: {{doctor.phone}}</p>
+          <p>Email: {{doctor.email}}</p>
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
+
+
+
+</div>

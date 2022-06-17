@@ -1,0 +1,140 @@
+@import "../../../app/shared/styles/variable";
+
+.no-mrRL {
+  margin: 0;
+}
+
+.fa-doctor {
+  padding: 40px 30px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &-title {
+      color: $white;
+      font-family: "Inter", sans-serif;
+      font-size: 1.4rem;
+      margin-left: 10px;
+    }
+    &-add {
+      .fa-addBtn {
+        background-color: $violet !important;
+        transition: all ease 0.2s;
+        font-family: "Inter", sans-serif;
+        font-weight: 300;
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+  &__body {
+    &-card {
+      padding: 20px;
+      &.p-card-body {
+        padding: 0;
+      }
+    }
+    &-info {
+      color: white;
+    }
+    &-header {
+      display: flex;
+      color: $text-color;
+      justify-content: space-between;
+    }
+    &-avatar {
+      &-wrapper {
+        width: 55px;
+        position: relative;
+      }
+      &-img {
+        width: 100%;
+        border-radius: 50%;
+      }
+      &-status {
+        width: 12px;
+        height: 12px;
+        left: 80%;
+        top: 65%;
+
+        border-radius: 50%;
+        background-color: $white;
+        position: absolute;
+      }
+      @mixin status($color) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: $color;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &-inactive {
+        width: 8px;
+        height: 8px;
+        @include status($inactive-status)
+      }
+      &-isActive {
+        width: 7px;
+        height: 7px;  
+        @include status($active-status)
+      }
+    }
+
+    &-info {
+      h3 {
+        font-size: 1.3rem;
+        font-family: "Inter", sans-serif;
+      }
+      &__division {
+        color: $darkGray;
+        margin-bottom: 0.5rem;
+      }
+      &__specialize {
+        font-weight: 600;
+      }
+    }
+    &-contact {
+      p {
+        color: $darkGray;
+      }
+    }
+ 
+    &-options-menu {
+      z-index: 2;
+    }
+    &-options-icon {
+      transition: all ease 0.2s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        path {
+          fill: white;
+        }
+      }
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+}
+.fa-doctor__body-card {
+  &.p-card {
+    background-color: $darkblue;
+    .p-card-body {
+      padding: 0px;
+    }
+    .p-card-footer {
+      padding: 0px;
+    }
+  }
+}
+
+:host ::ng-deep p-menu-overlay {
+  background-color: $darkGray;
+  position: relative;
+  right: 0;
+  top: 10px;
+}

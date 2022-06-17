@@ -1,0 +1,83 @@
+@import '../../../app/shared/styles/variable';
+.fa-dashboard{
+    padding: 30px;
+    &__header{
+        margin-bottom: 30px;
+    }
+    &__options{
+   
+        background-color: $darkblue;
+        padding: 30px;
+        border-radius: 10px;
+        position: relative;
+        &-content{
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+           
+        }
+        &-menu{
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+    }
+
+    &__info{
+    
+        p{
+            margin-bottom: 0;
+            color: $text-color;
+            font-family: 'Inter',sans-serif;
+            font-size: 1.2rem;
+        }
+        span{
+            color: $light-white;
+            font-family: 'Inter',sans-serif;
+            font-size: .9rem;
+        }
+    }
+    @mixin icon-wrap($color){
+        padding: 16px 18px;
+        border-radius: 10px;
+        background-color:$color;
+        margin-right: 20px;
+    }
+    &__calendar{
+       @include icon-wrap($blue)
+    }
+    &__operations{
+        @include icon-wrap($violet)
+
+    }
+    &__new-patients{
+        @include icon-wrap($lightViolet)
+
+    }
+    &__earning{
+        @include icon-wrap($pink)
+    }
+    @mixin dashboad-frame{
+        background-color: $darkblue;
+        border: 1px solid $lightDarkBlue;
+        border-radius: 14px;
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+    &__chart-container{
+        @include dashboad-frame
+    }
+    &__barChart-container{
+        @include dashboad-frame
+    }
+
+
+    // footer
+    &__patients-list{
+        @include dashboad-frame
+    }
+    &__top-doctors{
+        @include dashboad-frame
+    }
+}
+
